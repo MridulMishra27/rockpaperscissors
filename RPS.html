@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Add a username input field -->
+    <div class="username">
+        <h3>Let's Play a Game</h3><br>
+        <label for="username">Enter Your Username: </label>
+        <input type="text" id="username" placeholder="Username"><br>
+        <img id="sg" onclick="startGame()" src="pressstart.png" alt="" width="64">
+
+        <!-- Display the username -->
+        <div id="displayUsername"></div>
+    </div>
+
+    <div class="container">
+        <div class="head">
+            <h1>Rock Paper Scissors </h1>
+        </div>
+
+        <div class="result">
+
+            <div>
+                <h2>Player Score </h2>
+                <h2 id="myscore">0</h2>
+            </div>
+
+            <div>
+                <h2>Computer Score </h2>
+                <h2 id="comScore">0</h2>
+            </div>
+        </div>
+
+        <div class="game">
+            <div>
+                <h2>Computer </h2>
+                <img id="comp" alt="">
+            </div>
+            <div>
+                <h2>Player </h2>
+                <img id="user" alt="">
+            </div>
+        </div>
+        <br>
+
+        <span>
+            <h2>Result : <h2 id="result"></h2>
+            </h2>
+
+        </span>
+
+        <div class="img">
+            <img onclick="case1()" src="rock.png" alt="">
+            <img onclick="case2()" src="paper.png" alt="">
+            <img onclick="case3()" src="scissor.png" alt="">
+
+        </div>
+
+    </div>
+    
+    <span>
+        <button class="lbandgs" onclick="toggleGameStats()">Toggle Game Stats</button>
+        <button class="lbandgs" onclick="toggleLeaderboard()">Toggle Leaderboard</button>
+    </span>
+    
+    <div class="gamestats" id="GSS">
+        <div id="gs"
+            style="text-align: center; background-color: rgb(255, 0, 0);border-radius: 11px; display: inline-block;">
+            GAME STATS </div>
+        <p><strong>🧒🏻Player Score </strong> <span id="playerCrown">👑</span> <span id="gamePlayerScore">0</span> </p>
+        <p><strong>💻Computer Score </strong> <span id="computerCrown">👑</span> <span id="gameComputerScore">0</span>
+        </p>
+    </div>
+
+    <div class="leaderboard" id="LBS">
+        <div id="lb" style="background-color: rgb(255,0,0); display: inline-block; border-radius: 10px;">LEADERBOARD</div>
+        <ul id="leaderboardList">
+        </ul>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
